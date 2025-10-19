@@ -3,6 +3,6 @@ fun main(){
     firewall.cast()
     val fireball = Spell("Громовой шаг", 2, "\u2728")
     fireball.cast()
-
+    val spell = Spell()
 
 }

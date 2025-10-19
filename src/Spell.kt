@@ -15,6 +15,12 @@ class Spell {
         this.height = size
         this.symbol = symbol
     }
+    constructor(){
+        this.name = ""
+        this.width = 0
+        this.height = 0
+        this.symbol = ""
+    }
 
     fun cast(){
         println("Кастуем $name!")
