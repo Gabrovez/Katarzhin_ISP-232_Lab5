@@ -1,20 +1,12 @@
-class Hero {
-    val name: String
-    val gender: String
-    val role: String
-    val level: Int
-    val element: String
-    var hp: Int
+class Hero(
+    val name: String,
+    val gender: String,
+    val role: String,
+    val level: Int,
+    val element: String,
+    var hp: Int,
     var mp: Int
-    constructor(name: String, gender: String, role: String, level: Int, element: String, hp: Int, mp: Int){
-        this.name = name
-        this.gender = gender
-        this.role = role
-        this.level = level
-        this.element = element
-        this.hp = hp
-        this.mp = mp
-    }
+) {
     fun sayHello(){
         println("Я - $name, мой путь только начинается!")
     }

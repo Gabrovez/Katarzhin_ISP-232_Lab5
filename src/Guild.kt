@@ -1,5 +1,5 @@
 fun main(){
-    val quests = mutableListOf<Quest>()
+    /*val quests = mutableListOf<Quest>()
     for (i in 1..3){
         println("Добавим квест #$i")
         val q = Quest("Охота на гоблинов", 2,3400, "лёгкий")
@@ -9,5 +9,7 @@ fun main(){
     println("Все доступные квесты: ")
     for (q in quests){
         q.printInfo()
-    }
+    }*/
+    val contract = Contract("Торговец", "Сопровождение каравана", 1500 )
+    contract.printContractInfo()
 }
