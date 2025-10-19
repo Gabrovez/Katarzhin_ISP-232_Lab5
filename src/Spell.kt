@@ -9,19 +9,8 @@ class Spell {
         this.height = height
         this.symbol = symbol
     }
-    constructor(name: String, size: Int, symbol: String){
-        this.name = name
-        this.width = size
-        this.height = size
-        this.symbol = symbol
-    }
-    constructor(){
-        this.name = ""
-        this.width = 0
-        this.height = 0
-        this.symbol = ""
-    }
-
+    constructor(name: String, size: Int, symbol: String) : this(name, size, size, symbol)
+    constructor() : this("", 0, 0, "",)
     fun cast(){
         println("Кастуем $name!")
         repeat(height){
