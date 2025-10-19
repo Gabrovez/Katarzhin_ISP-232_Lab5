@@ -13,5 +13,4 @@ class Student {
         age += 1
         println("$name празднует свой день рождения! Теперь ему $age лет .")
     }
-
 }
