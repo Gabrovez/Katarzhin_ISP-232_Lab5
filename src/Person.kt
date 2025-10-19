@@ -1,18 +1,7 @@
 fun main() {
-    val naruto = Hero()
-    naruto.name = "Наруто"
-    naruto.role = "Шиноби"
-    naruto.element = "Ветер"
-    naruto.mp = 100
-    val kakashi = Hero()
-    kakashi.name = "Какаши"
-    kakashi.role = "Шиноби"
-    kakashi.element = "Молния"
-    kakashi.mp = 100
-    val orochimaru = Enemy()
-    orochimaru.name = "Орочимару"
-    orochimaru.element = "Ветер"
-
+    val naruto = Hero("Наруто", "Мужской", "Шиноби", 5, "Ветер", 150, 200 )
+    val kakashi = Hero("Какаши", "Мужской","Шиноби", 15, "Молния", 250, 300 )
+    val orochimaru = Enemy("Орочимару", 350, "Ветер")
     naruto.castSpellOn(orochimaru,"Рассенган", 30)
     naruto.duel(kakashi)
 }

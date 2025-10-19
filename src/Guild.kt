@@ -2,16 +2,7 @@ fun main(){
     val quests = mutableListOf<Quest>()
     for (i in 1..3){
         println("Добавим квест #$i")
-        val q = Quest()
-        print("Название: ")
-        val title = readln()
-        print("Время (ч): ")
-        val duration = readln().toInt()
-        print("Награда: ")
-        val reward = readln().toInt()
-        print("Сложность: ")
-        val difficulty = readln()
-        q.init(title, duration, reward, difficulty)
+        val q = Quest("Охота на гоблинов", 2,3400, "лёгкий")
         quests.add(q)
         println()
     }
