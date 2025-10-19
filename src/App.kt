@@ -1,19 +1,10 @@
 fun main(){
-    val weapon = Weapon()
-    weapon.showInfo()
-    weapon.upgrade(11)
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-    weapon.use()
-
-
+    val student = Student()
+    print("Введите имя: ")
+    val name = readln()
+    print("Введите возраст: ")
+    val age = readln().toInt()
+    student.init(name,age)
+    student.introduce()
+    student.haveBirthday()
 }
