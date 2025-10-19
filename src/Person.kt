@@ -1,38 +1,18 @@
 fun main() {
+    val naruto = Hero()
+    naruto.name = "Наруто"
+    naruto.role = "Шиноби"
+    naruto.element = "Ветер"
+    naruto.mp = 100
+    val kakashi = Hero()
+    kakashi.name = "Какаши"
+    kakashi.role = "Шиноби"
+    kakashi.element = "Молния"
+    kakashi.mp = 100
+    val orochimaru = Enemy()
+    orochimaru.name = "Орочимару"
+    orochimaru.element = "Ветер"
 
-    val hero = Hero()
-    println("Введите имя героя")
-    hero.name = readln()
-    println("Введите пол героя")
-    hero.gender = readln()
-    println("Введите класс героя")
-    hero.role = readln()
-    println("Введите здоровье героя")
-    hero.hp = readln().toInt()
-    println("Введите ману героя")
-    hero.mp = readln().toInt()
-    println("Введите уровень героя")
-    hero.level = readln().toInt()
-    println("Введите стихию героя")
-    hero.element = readln()
-    println("Имя: ${hero.name} \nПол: ${hero.gender} \nКласс: ${hero.role}\nЗдоровье: ${hero.hp}\nМана: ${hero.mp}\nУровень: ${hero.level}\nСтихия: ${hero.element}")
-    hero.sayHello()
-    hero.showStats()
-    hero.meditate()
-    hero.takeDamage()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.castSpell()
-    hero.meditate()
-    hero.heal()
-    hero.heal()
-    hero.heal()
-
+    naruto.castSpellOn(orochimaru,"Рассенган", 30)
+    naruto.duel(kakashi)
 }
