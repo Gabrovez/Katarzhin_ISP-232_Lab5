@@ -4,5 +4,7 @@ fun main(){
     val fireball = Spell("Громовой шаг", 2, "\u2728")
     fireball.cast()
     val spell = Spell()
-
+    println(firewall.area())
+    println(fireball.area())
+    println(spell.area())
 }

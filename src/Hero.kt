@@ -1,12 +1,29 @@
 class Hero(
     val name: String,
-    val gender: String,
-    val role: String,
-    val level: Int,
-    val element: String,
-    var hp: Int,
-    var mp: Int
+    val gender: String ="",
+    val role: String = "",
+    val level: Int = 0,
+    val element: String = "",
+    var hp: Int = 1,
+    var mp: Int = 1
 ) {
+    fun canAcceptQuest(quest: Quest): Boolean{
+         val canAccept = when(quest.difficulty.lowercase()){
+            "лёгкий" -> level >= 1
+            "средний" -> level >= 3
+            "сложный" -> level >= 5
+            else -> false
+        }
+        if (canAccept){
+            println("$name может принять квест «${quest.title}>>!")
+        }else{
+            println("$name не может принять квест «${quest.title}>>.Требуется более высокий уровень.")
+        }
+        return canAccept
+    }
+    fun isAlive(): Boolean{
+        return hp > 0
+    }
     fun sayHello(){
         println("Я - $name, мой путь только начинается!")
     }

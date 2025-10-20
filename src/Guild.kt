@@ -9,7 +9,14 @@ fun main(){
     println("Все доступные квесты: ")
     for (q in quests){
         q.printInfo()
-    }*/
+    }
     val contract = Contract("Торговец", "Сопровождение каравана", 1500 )
     contract.printContractInfo()
+    val quest = Quest("Побег из замка",  5, 700, "Сложный")
+    println("Квест сложный? ${quest.isHard()}")
+    */
+    val quest1 =  Quest(title = "Охота", duration = 2, reward = 300, difficulty = "Средний")
+    println(quest1.goldPerHour()) // 150
+    val quest2 = Quest (title = "Рыбалка", duration = 0, reward = 500, difficulty = "Лёгкий")
+    println(quest2.goldPerHour()) //0
 }

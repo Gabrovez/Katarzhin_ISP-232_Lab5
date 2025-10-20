@@ -14,5 +14,11 @@ class Spell(
             println()
         }
     }
+    fun description(): String{
+        return "Заклинание $name занимает область ${width}x$height и использует символ $symbol"
+    }
+    fun area():Int {
+        return width * height
+    }
 
 }
