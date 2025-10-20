@@ -28,6 +28,7 @@ fun main() {
     println(enemy2.getThreatLevel())
     val enemy3 = Enemy(name = "Дракон", hp = 200)
     println(enemy3.getThreatLevel())
+    println("Мощь ${enemy3.name}а равна ${enemy3.calculatePower()}")
     val z = Enemy(name = "Zombie", hp = -200)
     println(z.getThreatLevel())
 

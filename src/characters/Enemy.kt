@@ -10,11 +10,14 @@ class Enemy(
             return "Некорректное здоровье"
         }
         return when{
-
             hp <= 50 -> "Низкий"
             hp <= 150 -> "Средний"
             else -> "Высокий"
         }
+    }
+    fun calculatePower(aggressionLevel: Int = 2): Int{
+        val power =  hp * aggressionLevel
+        return power
     }
     fun isStrong(): Boolean{
         return hp > 100
