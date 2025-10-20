@@ -1,3 +1,5 @@
+package magic
+
 class Spell(
     val name: String = "",
     val width: Int = 0,

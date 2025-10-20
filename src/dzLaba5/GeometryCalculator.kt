@@ -1,3 +1,5 @@
+package dzLaba5
+
 class GeometryCalculator {
     fun rectangleInfo(width: Int, height: Int){
         println("Прямоугольник $width x $height:")

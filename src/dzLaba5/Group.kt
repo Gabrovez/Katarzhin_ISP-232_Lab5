@@ -1,3 +1,5 @@
+package dzLaba5
+
 class Group {
     var nam: String = "Забыл"
     var students = mutableListOf<Student>()

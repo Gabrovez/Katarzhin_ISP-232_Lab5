@@ -1,3 +1,5 @@
+package dzLaba5
+
 class Student {
     var name: String = "Забыл"
     var age: Int = 1

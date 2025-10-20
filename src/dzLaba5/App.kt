@@ -1,3 +1,5 @@
+package dzLaba5
+
 fun main(){
     val calc = GeometryCalculator()
     println("=== Прямоугольники ===")

@@ -1,3 +1,6 @@
+package characters
+import world.Quest
+
 class Hero(
     val name: String,
     val gender: String ="",
@@ -74,7 +77,7 @@ class Hero(
         println("$name атакует врага ${enemy.name}!")
         enemy.takeDamage(damage)
     }
-    fun castSpellOn(enemy: Enemy,spellName: String ,damage: Int){
+    fun castSpellOn(enemy: Enemy, spellName: String, damage: Int){
         println("$name использует заклинание '$spellName' против ${enemy.name}!")
         if (element == enemy.element){
             println("Стихии совпадают! Урон снижен.")

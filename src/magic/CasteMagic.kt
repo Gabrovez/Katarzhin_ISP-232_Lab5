@@ -1,3 +1,5 @@
+package magic
+
 fun main(){
     val firewall = Spell("Молния", 10,1, "\u26A1")
     firewall.cast()
