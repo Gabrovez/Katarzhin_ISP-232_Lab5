@@ -1,4 +1,5 @@
 package characters
+import magic.Spell
 import world.Quest
 
 class Hero(
@@ -10,6 +11,9 @@ class Hero(
     var hp: Int = 1,
     var mp: Int = 1
 ) {
+    fun canCast(spell: Spell): Boolean{
+        return (spell.name.length <= level * 2) && (spell.width <= 5 && spell.height <= 5)
+    }
     fun canAcceptQuest(quest: Quest): Boolean{
          val canAccept = when(quest.difficulty.lowercase()){
             "лёгкий" -> level >= 1

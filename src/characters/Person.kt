@@ -1,5 +1,6 @@
 package characters
 
+import magic.Spell
 import world.Quest
 
 fun main() {
@@ -29,4 +30,16 @@ fun main() {
     println(enemy3.getThreatLevel())
     val z = Enemy(name = "Zombie", hp = -200)
     println(z.getThreatLevel())
+
+    val voin = Hero("Артур", level = 2)
+    val wizard = Hero("Гендальф", level = 12)
+    val firewall = Spell("Молния", 4,1, "\u26A1")
+    firewall.cast()
+    println("Воин может это кастануть: ${voin.canCast(firewall)}")
+    println("Волшебник может это кастануть: ${wizard.canCast(firewall)}")
+    val fireball = Spell("Громовой шаг", 2, "\u2728")
+    fireball.cast()
+    println("$ Воин может это кастануть: ${voin.canCast(fireball)}")
+    println("$ Волшебник может это кастануть: ${wizard.canCast(fireball)}")
+
 }
