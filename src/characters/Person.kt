@@ -51,5 +51,10 @@ fun main() {
     dragon.startPhase (phasenum = 2)
     println(dragon.dropLoot())
     dragon.takeDamage (amount = 150)
-
+    val enemy: GameCharacter = Enemy ( "Jhin")
+    val hero = Hero ("Naruto")
+    val npc = NPC("Merchant")
+    (enemy as Enemy).takeDamage(20)
+    enemy.takeDamage(20)
+    println(enemy.name)
 }
