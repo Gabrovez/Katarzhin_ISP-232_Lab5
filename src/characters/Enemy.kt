@@ -1,10 +1,10 @@
 package characters
 
-class Enemy(
-    val name: String,
-    var hp: Int,
-    val element: String = ""
-) {
+open class Enemy(
+    name: String,
+    hp: Int = 0,
+    element: String = "No Info"
+) : GameCharacter(name, hp, element){
     fun getThreatLevel(): String{
         if (hp <0){
             return "Некорректное здоровье"

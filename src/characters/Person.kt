@@ -4,7 +4,7 @@ import magic.Spell
 import world.Quest
 
 fun main() {
-    val naruto = Hero("Наруто", "Мужской", "Шиноби", 5, "Ветер", 150, 200)
+    /*val naruto = Hero("Наруто", "Мужской", "Шиноби", 5, "Ветер", 150, 200)
     val kakashi = Hero("Какаши", "Мужской", "Шиноби", 15, "Молния", 250, 300)
     val orochimaru = Enemy("Орочимару", 350, "Ветер")
     naruto.castSpellOn(orochimaru,"Рассенган", 30)
@@ -41,6 +41,15 @@ fun main() {
     val fireball = Spell("Громовой шаг", 2, "\u2728")
     fireball.cast()
     println("$ Воин может это кастануть: ${voin.canCast(fireball)}")
-    println("$ Волшебник может это кастануть: ${wizard.canCast(fireball)}")
+    println("$ Волшебник может это кастануть: ${wizard.canCast(fireball)}")*/
+    // Тестируем NPC
+    val blacksmith = NPC( "Blacksmith Ulfric", hasQuest = true)
+    println(blacksmith.giveQuest())
+    blacksmith.trade()
+// Тестируем Boss
+    val dragon = Boss ("Alduin", 500,  "Fire",  4, true)
+    dragon.startPhase (phasenum = 2)
+    println(dragon.dropLoot())
+    dragon.takeDamage (amount = 150)
 
 }

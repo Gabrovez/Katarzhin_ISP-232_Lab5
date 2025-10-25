@@ -3,14 +3,14 @@ import magic.Spell
 import world.Quest
 
 class Hero(
-    val name: String,
-    val gender: String ="",
-    val role: String = "",
+    name: String,
+    val gender: String = "No Info",
+    val role: String = "No Info",
     val level: Int = 0,
-    val element: String = "",
-    var hp: Int = 1,
-    var mp: Int = 1
-) {
+    element: String = "No Info",
+    hp: Int = 0,
+    var mp: Int = 0
+) : GameCharacter(name, hp, element){
     fun canCast(spell: Spell): Boolean{
         return (spell.name.length <= level * 2) && (spell.width <= 5 && spell.height <= 5)
     }
