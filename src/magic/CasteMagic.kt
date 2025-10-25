@@ -1,12 +1,15 @@
 package magic
 
 fun main(){
-    val firewall = Spell("Молния", 10,1, "\u26A1")
-    firewall.cast()
-    val fireball = Spell("Громовой шаг", 2, "\u2728")
-    fireball.cast()
-    val spell = Spell()
-    println(firewall.area())
-    println(fireball.area())
-    println(spell.area())
+    val fireball = Spell( "Fireball", 3,  3, "\uD83D\uDD25")
+    val heal = InstantSpell( "Heal",  "\uD83D\uDC9A",  5)
+
+    println("Spell: ${fireball.name}")
+    println("Symbol: ${fireball.symbol}")
+    println("Duration: ${fireball.duration} seconds")
+
+    println("\nInstant spell: ${heal.name}")
+    println("Symbol: ${heal.symbol}")
+    println("Power: ${heal.power}")
+    println("Duration: ${heal.duration} seconds")
 }
