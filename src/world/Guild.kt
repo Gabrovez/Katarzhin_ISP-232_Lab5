@@ -16,9 +16,21 @@ fun main(){
     contract.printContractInfo()
     val quest = world.Quest("Побег из замка",  5, 700, "Сложный")
     println("Квест сложный? ${quest.isHard()}")
-    */
+
     val quest1 = Quest(title = "Охота", duration = 2, reward = 300, difficulty = "Средний")
     println(quest1.goldPerHour()) // 150
     val quest2 = Quest(title = "Рыбалка", duration = 0, reward = 500, difficulty = "Лёгкий")
     println(quest2.goldPerHour()) //0
+    */
+    val quest = Quest("Search of an artifact", 3,800, "Medium")
+    val contract = Contract("Caravan protection", "Trade guild", "Cargo security", 1200)
+    val specialOP = SpecialOperation("Operation 'Shadow'",2500, 2, true)
+    println("Quest info:")
+    println("Title: ${quest.title}, Reward : ${quest.reward}")
+    println("\nContract info:")
+    println("Title: ${contract.title}, Client : ${contract.clientName}")
+    println("\nSpecial operation info:")
+    println("Title: ${specialOP.title}")
+    specialOP.showReward()
+
 }
