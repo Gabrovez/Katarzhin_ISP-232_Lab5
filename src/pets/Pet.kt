@@ -5,10 +5,10 @@ open class Pet (
     val maxHP : Int,
     val speed : Int
 ){
-    fun describe(){
+    open fun describe(){
         println("Pet $name have speed: $speed and his maxHP is: $maxHP")
     }
-    fun makeSound(){
+    open fun makeSound(){
         println("$name make a sound")
     }
 }

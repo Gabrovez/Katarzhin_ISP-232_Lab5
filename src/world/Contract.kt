@@ -12,5 +12,8 @@ class Contract (
         println("Задача: $taskDescription")
         println("Награда: $reward")
         println("Срочность: ${if (isUrgent) "Срочно!" else "Обычный контракт"}")
-        }
+    }
+    override fun describe() {
+        println("Contract '$title' from $clientName: $taskDescription (${if(isUrgent) "Urgently" else "Commonly"}), reward: $reward gold coins")
+    }
 }

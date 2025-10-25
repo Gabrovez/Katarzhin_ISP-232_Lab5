@@ -21,7 +21,7 @@ fun main(){
     println(quest1.goldPerHour()) // 150
     val quest2 = Quest(title = "Рыбалка", duration = 0, reward = 500, difficulty = "Лёгкий")
     println(quest2.goldPerHour()) //0
-    */
+
     val quest = Quest("Search of an artifact", 3,800, "Medium")
     val contract = Contract("Caravan protection", "Trade guild", "Cargo security", 1200)
     val specialOP = SpecialOperation("Operation 'Shadow'",2500, 2, true)
@@ -31,6 +31,17 @@ fun main(){
     println("Title: ${contract.title}, Client : ${contract.clientName}")
     println("\nSpecial operation info:")
     println("Title: ${specialOP.title}")
-    specialOP.showReward()
+    specialOP.showReward()*/
+    val missions = listOf<Mission>(
+        Quest("Monster hunting", 3,600,"Medium"),
+        SpecialOperation("Night raid", 1500, reqClearance = 2, isCovert = true),
+        Contract("Caravan escort", "Trade guild", "Deliver cargo through the forest", 800, isUrgent = true)
+    )
+    for (miss in missions){
+        miss.describe()
+        println("High reward? ${if (miss.isHighReward()) "Yes" else "No"}")
+        println()
+    }
+
 
 }

@@ -10,4 +10,8 @@ class SpecialOperation (
         println("Required clearance: $reqClearance")
         println("Secrecy mode: ${if (isCovert) "Top secret" else "Common"}")
     }
+
+    override fun describe() {
+        println("Spec Op '$title'. Required Clearance: $reqClearance, mode: ${if(isCovert) "Secret" else "Openly"}, reward: $reward gold coins")
+    }
 }

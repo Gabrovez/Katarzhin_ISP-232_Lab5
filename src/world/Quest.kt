@@ -18,4 +18,7 @@ class Quest(
         return reward/duration
     }
 
+    override fun describe() {
+        println("Quest '$title' for $duration hours, difficulty: $difficulty, reward: $reward gold coins")
+    }
 }
