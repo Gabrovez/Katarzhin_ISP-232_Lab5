@@ -2,12 +2,19 @@ package world
 
 class Quest(
     title: String,
-    val duration: Int = 0,
+    val duration: Int ,
     reward: Int,
-    val difficulty: String = ""
+    val difficulty: String,
+    val questType: QuestType
+
 ) : Mission(title, reward) {
     fun  printInfo(){
-        println("Название квеста: ${this.title} Время выполнения: ${this.duration} Награда: ${this.reward} золотых Уровень сложности: ${this.difficulty}")
+        println("Title of quest: ${this.title} ")
+        println("Type of quest: ${questType.description}")
+        println("Execution time: ${this.duration} h. ")
+        println("Reward: ${this.reward} gold coins ")
+        println("Difficulty level: ${this.difficulty}")
+
     }
     fun isHard(): Boolean{
         return difficulty.lowercase() == "Сложный"
@@ -17,8 +24,9 @@ class Quest(
         if (duration == 0) return 0
         return reward/duration
     }
-
     override fun describe() {
         println("Quest '$title' for $duration hours, difficulty: $difficulty, reward: $reward gold coins")
+        println("Type of quest: ${questType.description}")
     }
+
 }
