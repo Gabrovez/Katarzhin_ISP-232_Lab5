@@ -10,7 +10,7 @@ fun main(){
         miss.describe()
         println("High reward? ${if (miss.isHighReward()) "Yes" else "No"}")
         println()
-    }*/
+    }
     val quests = listOf<Quest>(
         Quest(title = "Escort trader to the village", duration = 4, reward = 120, difficulty = "Medium",questType = QuestType.ESCORT),
         Quest(title = "Eliminate group of hostile orcs",duration = 2, reward = 250, difficulty = "Medium",questType = QuestType.ELIMINATION),
@@ -34,7 +34,10 @@ fun main(){
             }
         }
     }
-    onlyExplore()
+    onlyExplore()*/
+    val trader = TraderDz()
+    trader.start()
+
 
 
 
